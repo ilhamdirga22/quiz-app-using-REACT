@@ -23,6 +23,12 @@ body {
     text-align: center;
     color: #333;
   }
+
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+  
   
   button {
     background-color: #4CAF50;

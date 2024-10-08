@@ -3,7 +3,7 @@ import axios from 'axios';
 // Fungsi untuk menunda request selama beberapa waktu
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const fetchQuizQuestions = async (amount = 10, retries = 10, delayMs = 1000) => {
+export const fetchQuizQuestions = async (amount = 10, retries = 3, delayMs = 1000) => {
   const endpoint = `https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple`;
 
   for (let i = 0; i < retries; i++) {

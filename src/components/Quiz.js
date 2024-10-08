@@ -8,7 +8,7 @@ const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(1000);  // Timer 1000 seconds
+  const [timer, setTimer] = useState(120);  // Timer 120 seconds
   const [isCompleted, setIsCompleted] = useState(false);
   const [username, setUsername] = useState(''); // State untuk menyimpan username
 
