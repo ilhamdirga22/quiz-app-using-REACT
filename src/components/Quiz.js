@@ -8,14 +8,14 @@ const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(120);  // Timer 120 seconds
+  const [timer, setTimer] = useState(120);  
   const [isCompleted, setIsCompleted] = useState(false);
-  const [username, setUsername] = useState(''); // State untuk menyimpan username
+  const [username, setUsername] = useState(''); 
 
-  // Mengambil username dari localStorage saat pertama kali komponen di-mount
+  
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
-    setUsername(storedUsername || 'Guest'); // Jika tidak ada username, gunakan 'Guest'
+    setUsername(storedUsername || 'Guest'); 
   }, []);
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Quiz = () => {
 
   return (
     <div className="container">
-      <h2>Welcome, {username}!</h2> {/* Menampilkan username di sini */}
+      <h2>Welcome, {username}!</h2>
       <h3>Quiz Time</h3>
       <p className="timer">Time left: {timer}s</p>
       {questions.length > 0 && (

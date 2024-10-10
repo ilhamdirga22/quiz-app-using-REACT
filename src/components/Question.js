@@ -3,6 +3,7 @@ import './App.css';
 
 const Question = ({ questionData, handleAnswerSelection }) => {
   const { question, correct_answer, incorrect_answers } = questionData;
+  
   const answers = [...incorrect_answers, correct_answer].sort();
 
   const handleAnswerClick = (answer) => {
@@ -11,17 +12,19 @@ const Question = ({ questionData, handleAnswerSelection }) => {
 
   return (
     <div className="question-container">
-      <h3 dangerouslySetInnerHTML={{ __html: question }} />
+      <h3>{question}</h3>
       {answers.map((answer, index) => (
         <button 
           key={index} 
           className="answer-button"
-          onClick={() => handleAnswerClick(answer)} 
-          dangerouslySetInnerHTML={{ __html: answer }}
-        />
+          onClick={() => handleAnswerClick(answer)}
+        >
+          {answer}
+        </button>
       ))}
     </div>
   );
 };
 
 export default Question;
+
