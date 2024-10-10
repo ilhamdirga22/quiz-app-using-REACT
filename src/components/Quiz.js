@@ -12,7 +12,6 @@ const Quiz = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [username, setUsername] = useState(''); 
 
-  
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     setUsername(storedUsername || 'Guest'); 
@@ -74,6 +73,12 @@ const Quiz = () => {
       <h2>Welcome, {username}!</h2>
       <h3>Quiz Time</h3>
       <p className="timer">Time left: {timer}s</p>
+
+      <div className="quiz-info">
+        <p>Total Soal: {questions.length}</p>
+        <p>Soal yang Dikerjakan: {currentQuestion + 1}/{questions.length}</p>
+      </div>
+
       {questions.length > 0 && (
         <Question 
           questionData={questions[currentQuestion]} 
